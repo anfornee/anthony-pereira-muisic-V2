@@ -1,0 +1,21 @@
+/* 
+
+Color Hex
+
+#ffffff - White
+#abadbd - Light Gray
+#2d2d40 - Slate Grey
+#1f244d - Slate Blue
+#080e3a - Deep Blue
+
+*/
+
+@import 'src/styles/fonts';
+@import 'src/styles/header';
+@import 'src/styles/nav';
+
+body {
+  margin: 0;
+  background: #13131c;
+  text-align: center;
+}
