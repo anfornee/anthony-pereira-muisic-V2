@@ -19,3 +19,17 @@ body {
   background: #13131c;
   text-align: center;
 }
+
+.bg {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url(./pngflow.png), url(./pngflow-flipped.png);
+  background-position: top, bottom;
+  background-size: contain;
+  background-repeat: no-repeat;
+  z-index: -1;
+  opacity: .15;
+}
