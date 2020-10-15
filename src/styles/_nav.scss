@@ -6,6 +6,15 @@ nav {
   justify-content: center;
   align-items: center;
   width: 100%;
+  position: relative;
+}
+
+.navlink-container {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: .5s;
 }
 
 nav h2 {
@@ -14,15 +23,15 @@ nav h2 {
   font-weight: 300;
   letter-spacing: .15em;
   font-size: 1.25em;
-  margin: 2em 0 0 0;
   cursor: pointer;
+  margin-bottom: .5em;
 }
 
 .projects-hover-line {
   min-width: 0em;
+  max-width: 0em;
   background: #fff;
   height: 2px;
-  margin: .5em auto -.5em;
   transition: .5s;
 }
 
@@ -30,11 +39,14 @@ nav h2 {
   min-width: 8em !important;
 }
 
+.projects-nav-active {
+  min-width: 8em !important;
+}
+
 .bio-hover-line {
   min-width: 0em;
   background: #fff;
   height: 2px;
-  margin: .5em auto -.5em;
   transition: .5s;
 }
 
@@ -42,14 +54,21 @@ nav h2 {
   min-width: 3em !important;
 }
 
+.bio-nav-active {
+  min-width: 3em !important;
+}
+
 .contact-hover-line {
   min-width: 0em;
   background: #fff;
   height: 2px;
-  margin: .5em auto -.5em;
   transition: .5s;
 }
 
 .contact-nav-hovered {
+  min-width: 7.4em !important;
+}
+
+.contact-nav-active {
   min-width: 7.4em !important;
 }

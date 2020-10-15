@@ -1,11 +1,14 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
-const Header = () => {
+const Header = ({ setLocation }) => {
   return (
     <header>
-      <h1 className='quicksand'>
-        ANTHONY PEREIRA
-      </h1>
+      <Link to='/' onClick={() => setLocation('/')}>
+        <h1 className='quicksand'>
+          ANTHONY PEREIRA
+        </h1>
+      </Link>
     </header>
   )
 }

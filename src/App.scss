@@ -13,6 +13,9 @@ Color Hex
 @import 'src/styles/fonts';
 @import 'src/styles/header';
 @import 'src/styles/nav';
+@import 'src/styles/bio';
+@import 'src/styles/contact';
+@import 'src/styles/projects';
 
 body {
   margin: 0;
@@ -20,16 +23,23 @@ body {
   text-align: center;
 }
 
-.bg {
+a {
+  text-decoration: none;
+}
+
+#bg-canvas{
+  opacity: .65;
   width: 100vw;
   height: 100vh;
   position: absolute;
   top: 0;
   left: 0;
-  background-image: url(./pngflow.png), url(./pngflow-flipped.png);
-  background-position: top, bottom;
-  background-size: contain;
-  background-repeat: no-repeat;
   z-index: -1;
-  opacity: .15;
+}
+
+.selected-content {
+  position: relative;
+  top: 7em;
+  color: #FFF;
+  transition: 1s;
 }
