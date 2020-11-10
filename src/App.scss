@@ -15,7 +15,11 @@ Color Hex
 @import 'src/styles/nav';
 @import 'src/styles/bio';
 @import 'src/styles/contact';
-@import 'src/styles/projects';
+@import 'src/styles/music';
+
+#root {
+  height: 100vh;
+}
 
 body {
   margin: 0;
@@ -38,8 +42,10 @@ a {
 }
 
 .selected-content {
+  display: flex;
+  justify-content: center;
   position: relative;
-  top: 7em;
+  top: 15%;
   color: #FFF;
   transition: 1s;
 }

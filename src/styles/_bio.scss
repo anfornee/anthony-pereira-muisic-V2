@@ -1,0 +1,25 @@
+#bio {
+  display: flex;
+  justify-content: space-around;
+  width: 80%;
+}
+
+.bio-image {
+  width: 30%;
+  border-radius: 50%;
+}
+
+.bio-container {
+  text-align: left;
+  width: 60%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.bio-text {
+  color: #fff;
+  font-weight: 300;
+  letter-spacing: .05em;
+  line-height: 1.5em;
+}

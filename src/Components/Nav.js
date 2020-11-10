@@ -17,7 +17,7 @@ const Nav = ({ location, setLocation }) => {
       <NavItem
         addHovered={addHovered}
         removeHovered={removeHovered}
-        item='projects'
+        item='music'
         location={location}
         setLocation={setLocation}
         defaultStyle={{ top: 0, opacity: 1 }}

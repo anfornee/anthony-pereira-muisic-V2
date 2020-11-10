@@ -3,7 +3,7 @@ import { Route } from 'react-router-dom'
 
 import Bio from './Bio'
 import Contact from './Contact'
-import Projects from './Projects'
+import Music from './Music'
 
 const SelectedContent = ({ location }) => {
   return (
@@ -15,8 +15,8 @@ const SelectedContent = ({ location }) => {
       }
       className='selected-content'
     >
-      <Route path='/projects'>
-        <Projects />
+      <Route path='/Music'>
+        <Music />
       </Route>
       <Route path='/bio'>
         <Bio />

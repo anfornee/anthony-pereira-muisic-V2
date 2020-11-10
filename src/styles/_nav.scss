@@ -27,7 +27,7 @@ nav h2 {
   margin-bottom: .5em;
 }
 
-.projects-hover-line {
+.music-hover-line {
   min-width: 0em;
   max-width: 0em;
   background: #fff;
@@ -35,12 +35,12 @@ nav h2 {
   transition: .5s;
 }
 
-.projects-nav-hovered {
-  min-width: 8em !important;
+.music-nav-hovered {
+  min-width: 5.15em !important;
 }
 
-.projects-nav-active {
-  min-width: 8em !important;
+.music-nav-active {
+  min-width: 5.15em !important;
 }
 
 .bio-hover-line {
