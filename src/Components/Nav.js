@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import NavItem from './NavItem'
 
 const Nav = ({ location, setLocation }) => {
@@ -14,6 +15,17 @@ const Nav = ({ location, setLocation }) => {
 
   return (
     <nav>
+      <div
+        className={location !== '/' ? 'nav-back-container active' : 'nav-back-container'}
+        onClick={() => setLocation('/')}
+      >
+        <Link
+          to='/'
+        >
+          <span className='nav-back' />
+          <span className='nav-back-text'>BACK</span>
+        </Link>
+      </div>
       <NavItem
         addHovered={addHovered}
         removeHovered={removeHovered}
