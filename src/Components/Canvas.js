@@ -19,12 +19,20 @@ const Canvas = props => {
     }
   }
 
-  useEffect(() => {
-    const canvas = canvasRef.current
+  const setCanvasExtents = canvas => {
     canvas.width = window.innerWidth
     canvas.height = window.innerHeight
+  }
+
+  useEffect(() => {
+    const canvas = canvasRef.current
+    setCanvasExtents(canvas)
     const c = canvas.getContext('2d')
     drawStars(c)
+    window.onresize = () => {
+      setCanvasExtents(canvas)
+      drawStars(c)
+    }
   }, [])
 
   return <canvas id='bg-canvas' ref={canvasRef} {...props} />

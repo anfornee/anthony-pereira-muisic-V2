@@ -3,5 +3,10 @@ header h1 {
   letter-spacing: 1em;
   font-family: 'Quicksand', sans-serif;
   font-weight: 500;
-  margin: 1.5em 0 0 0;
+  line-height: 1.5em;
+  position: fixed;
+  top: 1em;
+  left: .5em;
+  text-align: center;
+  width: 100%;
 }

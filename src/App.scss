@@ -17,24 +17,64 @@ Color Hex
 @import 'src/styles/contact';
 @import 'src/styles/music';
 
-#root {
-  height: 100vh;
+html {
+  margin: 0;
+  padding: 0;
 }
 
 body {
+  position: fixed;
+  left: 0px;
+  right: 0px;
+  top: 0px;
+  bottom: 0px;
+  overflow: hidden;
   margin: 0;
+  padding: 0;
   background: #13131c;
   text-align: center;
+
+  @media screen and (max-width: 1020px) {
+    font-size: 1.57vw;
+  }
+
+  @media screen and (max-width: 640px) {
+    font-size: 2.75vw;
+  }
+}
+
+#main {
+  width: 100%;
 }
 
 a {
   text-decoration: none;
 }
 
+.mobile-only {
+  display: none;
+
+  @media screen and (max-width: 640px) {
+    display: inherit;
+  }
+}
+
+.desktop-only {
+  @media screen and (max-width: 640px) {
+    display: none;
+  }
+}
+
+.block {
+  display: block;
+}
+
 #bg-canvas{
   opacity: .65;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
   position: absolute;
   top: 0;
   left: 0;
@@ -45,7 +85,8 @@ a {
   display: flex;
   justify-content: center;
   position: relative;
-  top: 15%;
+  top: 15em;
   color: #FFF;
   transition: 1s;
+  overflow-y:auto
 }

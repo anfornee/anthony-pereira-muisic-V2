@@ -10,8 +10,8 @@ const SelectedContent = ({ location }) => {
     <div
       style={
         location === '/'
-          ? { opacity: 0 }
-          : { opacity: 1 }
+          ? { opacity: 0, display: 'none' }
+          : { opacity: 1, display: 'flex' }
       }
       className='selected-content'
     >

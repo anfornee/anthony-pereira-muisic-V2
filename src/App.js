@@ -19,9 +19,11 @@ const App = () => {
   return (
     <Router>
       <Canvas />
-      <Header setLocation={setLocation} />
-      <Nav location={location} setLocation={setLocation} />
-      <SelectedContent location={location} />
+      <div id='main'>
+        <Header setLocation={setLocation} />
+        <Nav location={location} setLocation={setLocation} />
+        <SelectedContent location={location} />
+      </div>
     </Router>
   )
 }

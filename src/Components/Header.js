@@ -6,7 +6,11 @@ const Header = ({ setLocation }) => {
     <header>
       <Link to='/' onClick={() => setLocation('/')}>
         <h1 className='quicksand'>
-          ANTHONY PEREIRA
+          <span className='desktop-only'>ANTHONY PEREIRA</span>
+          <span className='mobile-only'>
+            <span className='block'>ANTHONY</span>
+            <span className='block'>PEREIRA</span>
+          </span>
         </h1>
       </Link>
     </header>
