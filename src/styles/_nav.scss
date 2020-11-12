@@ -9,7 +9,8 @@ nav {
   top: 15em;
 
   @media screen and (max-width: 640px) {
-    top: 15em;
+    top: 3em;
+    font-size: 1.5em;
   }
 }
 
@@ -95,17 +96,17 @@ nav h2 {
   min-width: 3em !important;
 }
 
-.contact-hover-line {
+.connect-hover-line {
   min-width: 0em;
   background: #fff;
   height: 2px;
   transition: .5s;
 }
 
-.contact-nav-hovered {
+.connect-nav-hovered {
   min-width: 7.4em !important;
 }
 
-.contact-nav-active {
+.connect-nav-active {
   min-width: 7.4em !important;
 }

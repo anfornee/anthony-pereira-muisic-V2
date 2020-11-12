@@ -2,7 +2,7 @@ import React from 'react'
 import { Route } from 'react-router-dom'
 
 import Bio from './Bio'
-import Contact from './Contact'
+import Connect from './Connect'
 import Music from './Music'
 
 const SelectedContent = ({ location }) => {
@@ -10,8 +10,8 @@ const SelectedContent = ({ location }) => {
     <div
       style={
         location === '/'
-          ? { opacity: 0, display: 'none' }
-          : { opacity: 1, display: 'flex' }
+          ? { opacity: 0, visibility: 'hidden' }
+          : { opacity: 1, visibility: 'visible' }
       }
       className='selected-content'
     >
@@ -21,8 +21,8 @@ const SelectedContent = ({ location }) => {
       <Route path='/bio'>
         <Bio />
       </Route>
-      <Route path='/contact'>
-        <Contact />
+      <Route path='/connect'>
+        <Connect />
       </Route>
     </div>
   )

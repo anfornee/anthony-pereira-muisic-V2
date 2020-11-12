@@ -45,7 +45,7 @@ const Nav = ({ location, setLocation }) => {
       <NavItem
         addHovered={addHovered}
         removeHovered={removeHovered}
-        item='contact'
+        item='connect'
         location={location}
         setLocation={setLocation}
         defaultStyle={{ top: '8em', opacity: 1, zIndex: 1 }}

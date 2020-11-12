@@ -14,7 +14,7 @@ Color Hex
 @import 'src/styles/header';
 @import 'src/styles/nav';
 @import 'src/styles/bio';
-@import 'src/styles/contact';
+@import 'src/styles/connect';
 @import 'src/styles/music';
 
 html {
@@ -39,16 +39,18 @@ body {
   }
 
   @media screen and (max-width: 640px) {
-    font-size: 2.75vw;
+    font-size: 3.5vw;
   }
 }
 
 #main {
   width: 100%;
+  z-index: 100;
 }
 
 a {
   text-decoration: none;
+  color: inherit;
 }
 
 .mobile-only {
@@ -70,7 +72,6 @@ a {
 }
 
 #bg-canvas{
-  opacity: .65;
   width: 100%;
   height: 100%;
   padding: 0;
@@ -78,7 +79,6 @@ a {
   position: absolute;
   top: 0;
   left: 0;
-  z-index: -1;
 }
 
 .selected-content {
@@ -88,5 +88,10 @@ a {
   top: 15em;
   color: #FFF;
   transition: 1s;
-  overflow-y:auto
+  max-height: calc(100vh - 50vh);
+  overflow-y: auto;
+
+  @media screen and (max-width: 640px) {
+    top: 12em;
+  }
 }
