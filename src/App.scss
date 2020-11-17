@@ -85,13 +85,12 @@ a {
   display: flex;
   justify-content: center;
   position: relative;
-  top: 15em;
   color: #FFF;
   transition: 1s;
   max-height: calc(100vh - 50vh);
   overflow-y: auto;
 
   @media screen and (max-width: 640px) {
-    top: 12em;
+    margin: 15em 0 0;
   }
 }

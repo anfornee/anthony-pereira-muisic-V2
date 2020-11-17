@@ -1,16 +1,15 @@
 nav {
-  margin: 0 auto 7em;
+  margin: 7em auto 7em;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 100%;
   position: relative;
-  top: 15em;
 
   @media screen and (max-width: 640px) {
-    top: 3em;
-    font-size: 1.5em;
+    margin: 5em 0 3em;
+    font-size: 1.25em;
   }
 }
 
@@ -37,6 +36,14 @@ nav {
   border-top: 10px solid transparent;
   border-bottom: 10px solid transparent;
   border-right: 20px solid #FFF;
+
+  @media screen and (max-width: 640px) {
+    right: 4.75em;
+    top: .4em;
+    border-top: 7px solid transparent;
+    border-bottom: 7px solid transparent;
+    border-right: 15px solid #FFF;
+  }
 }
 
 .nav-back-text {
