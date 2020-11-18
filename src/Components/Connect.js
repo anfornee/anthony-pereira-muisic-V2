@@ -6,7 +6,7 @@ const Connect = props => {
   return (
     <div id='connect'>
       <p className='email-text roboto'>
-        contact@theanthonypereira.com
+        contact@anthonypereiramusic.com
       </p>
       <a
         className='social-icons'
