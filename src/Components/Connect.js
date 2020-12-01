@@ -1,24 +1,32 @@
 import React from 'react'
 
-import instagram from '../images/icons/instagram.png'
+import Social from './Social'
 
-const Connect = props => {
+const Connect = ({ images }) => {
   return (
     <div id='connect'>
       <p className='email-text roboto'>
         contact@anthonypereiramusic.com
       </p>
-      <a
-        className='social-icons'
-        href='https://www.instagram.com/anthonypereiramusic/'
-        target='_blank'
-        rel='noopener noreferrer'
-      >
-        <div className='icon-container'>
-          <img className='social-icon-img' src={instagram} alt='instagram' />
-          <p className='social-icon-text roboto'>@anthonypereiramusic</p>
-        </div>
-      </a>
+      <Social
+        platform='youtube'
+        link='https://www.youtube.com/channel/UCSFjL86stjY_ONeb-ct_cPA'
+        iconSrc={images.youtubeIcon}
+        username='Anthony Pereira Music'
+      />
+      <Social
+        platform='instagram'
+        link='https://www.instagram.com/anthonypereiramusic/'
+        iconSrc={images.instagramIcon}
+        username='@anthonypereiramusic'
+      />
+      <Social
+        platform='twitter'
+        link='https://twitter.com/anthonyp_music'
+        iconSrc={images.twitterIcon}
+        username='@anthonyp_music'
+      />
+      <div className='footer-space mobile-only' />
     </div>
   )
 }

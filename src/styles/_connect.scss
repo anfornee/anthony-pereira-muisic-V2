@@ -1,3 +1,7 @@
+.social-icon-container {
+  margin: 1.5em 0;
+}
+
 .email-text {
   font-size: 1.5em;
   font-weight: 400;
@@ -9,9 +13,13 @@
   }
 }
 
+.social-icons {
+  width: 100%;
+}
+
 .social-icon-img {
   filter: invert(100%);
-  width: 4em;
+  height: 4em;
   position: relative;
   bottom: 0;
   transition: .2s;
@@ -19,8 +27,14 @@
 
 .icon-container {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
+}
+
+.icon-img-container {
+  display: flex;
+  width: 30%;
+  justify-content: flex-end;
 }
 
 .social-icon-img:hover {
@@ -28,7 +42,9 @@
 }
 
 .social-icon-text {
+  width: 70%;
   font-size: 1.25em;
   letter-spacing: .05em;
   margin-left: 1em;
+  text-align: left;
 }

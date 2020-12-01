@@ -1,4 +1,4 @@
-nav {
+.nav-container {
   margin: 7em auto 7em;
   display: flex;
   flex-direction: column;
@@ -62,7 +62,7 @@ nav {
   transition: .5s;
 }
 
-nav h2 {
+.nav-container h2 {
   font-family: 'Quicksand', sans-serif;
   color: #fff;
   font-weight: 300;

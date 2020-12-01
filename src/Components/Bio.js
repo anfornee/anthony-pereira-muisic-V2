@@ -1,11 +1,10 @@
 import React from 'react'
 
-import profileImg from '../images/IMG_1131.JPG'
-
-const Bio = props => {
+const Bio = ({ images }) => {
+  console.log(images)
   return (
     <div id='bio'>
-      <img className='bio-image' src={profileImg} alt='Profile' />
+      <img className='bio-image' src={images.profileImg} alt='Profile' />
       <div className='bio-container'>
         <p className='bio-text roboto'>
           Surrounded by music his entire life, Anthony learned how to fully express

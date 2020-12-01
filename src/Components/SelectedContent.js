@@ -5,7 +5,15 @@ import Bio from './Bio'
 import Connect from './Connect'
 import Music from './Music'
 
-const SelectedContent = ({ location }) => {
+const SelectedContent = ({ location, images }) => {
+  let isSafari = false
+
+  if (navigator.userAgent.indexOf('Safari') !== -1) {
+    if (navigator.userAgent.indexOf('Chrome') !== -1) {
+      isSafari = false
+    } else isSafari = true
+  }
+
   return (
     <div
       style={
@@ -13,17 +21,26 @@ const SelectedContent = ({ location }) => {
           ? { opacity: 0, visibility: 'hidden' }
           : { opacity: 1, visibility: 'visible' }
       }
-      className='selected-content'
+      className={isSafari ? 'selected-content safari' : 'selected-content'}
     >
-      <Route path='/Music'>
-        <Music />
-      </Route>
-      <Route path='/bio'>
-        <Bio />
-      </Route>
-      <Route path='/connect'>
-        <Connect />
-      </Route>
+      <Route
+        path='/music'
+        render={() => (
+          <Music images={images} />
+        )}
+      />
+      <Route
+        path='/bio'
+        render={() => (
+          <Bio images={images} />
+        )}
+      />
+      <Route
+        path='/connect'
+        render={() => (
+          <Connect images={images} />
+        )}
+      />
     </div>
   )
 }

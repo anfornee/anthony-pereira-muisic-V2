@@ -14,7 +14,7 @@ const Nav = ({ location, setLocation }) => {
   }
 
   return (
-    <nav>
+    <div className='nav-container'>
       <div
         className={location !== '/' ? 'nav-back-container active' : 'nav-back-container'}
         onClick={() => setLocation('/')}
@@ -50,7 +50,7 @@ const Nav = ({ location, setLocation }) => {
         setLocation={setLocation}
         defaultStyle={{ top: '8em', opacity: 1, zIndex: 1 }}
       />
-    </nav>
+    </div>
   )
 }
 
