@@ -1,7 +1,6 @@
 import React from 'react'
 
 const Bio = ({ images }) => {
-  console.log(images)
   return (
     <div id='bio'>
       <img className='bio-image' src={images.profileImg} alt='Profile' />
