@@ -117,3 +117,18 @@
 .connect-nav-active {
   min-width: 7.4em !important;
 }
+
+.latest-hover-line {
+  min-width: 0em;
+  background: #fff;
+  height: 2px;
+  transition: .5s;
+}
+
+.latest-nav-hovered {
+  min-width: 6em !important;
+}
+
+.latest-nav-active {
+  min-width: 6em !important;
+}

@@ -3,6 +3,7 @@ import { Route } from 'react-router-dom'
 
 import Bio from './Bio'
 import Connect from './Connect'
+import Latest from './Latest'
 import Music from './Music'
 
 const SelectedContent = ({ location, images }) => {
@@ -39,6 +40,12 @@ const SelectedContent = ({ location, images }) => {
         path='/connect'
         render={() => (
           <Connect images={images} />
+        )}
+      />
+      <Route
+        path='/latest'
+        render={() => (
+          <Latest images={images} />
         )}
       />
     </div>

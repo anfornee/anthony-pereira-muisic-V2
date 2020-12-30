@@ -60,12 +60,11 @@ const App = () => {
       <Canvas />
       {
         imagesLoaded
-          ?
-            <div id='main'>
-              <Header setLocation={setLocation} />
-              <Nav location={location} setLocation={setLocation} />
-              <SelectedContent location={location} images={images} />
-            </div>
+          ? <div id='main'>
+            <Header setLocation={setLocation} />
+            <Nav location={location} setLocation={setLocation} />
+            <SelectedContent location={location} images={images} />
+          </div>
           : false
       }
     </Router>

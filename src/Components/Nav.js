@@ -50,6 +50,14 @@ const Nav = ({ location, setLocation }) => {
         setLocation={setLocation}
         defaultStyle={{ top: '8em', opacity: 1, zIndex: 1 }}
       />
+      <NavItem
+        addHovered={addHovered}
+        removeHovered={removeHovered}
+        item='latest'
+        location={location}
+        setLocation={setLocation}
+        defaultStyle={{ top: '12em', opacity: 1, zIndex: 1 }}
+      />
     </div>
   )
 }
