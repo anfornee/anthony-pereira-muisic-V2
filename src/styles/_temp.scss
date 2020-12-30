@@ -1,0 +1,26 @@
+header#temp {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+
+  h1 {
+    color: #fff;
+    letter-spacing: .75em;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 500;
+    margin: 0 0 1em -.25em;
+
+    @media screen and (max-width: 640px) {
+      font-size: 1.4em;
+    }
+  }
+
+  img {
+    height: 300px;
+  }
+
+}
