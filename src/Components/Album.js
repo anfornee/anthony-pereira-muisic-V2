@@ -4,7 +4,7 @@ import appleIcon from '../images/icons/001-apple.png'
 import spotifyIcon from '../images/icons/002-spotify.png'
 
 const Album = ({ title, imgSrc, links }) => (
-  <div className='album quicksand'>
+  <div className='album roboto'>
     <div className='album-container'>
       <img
         className='album-img'

@@ -3,14 +3,10 @@
 }
 
 .email-text {
-  font-size: 1.5em;
-  font-weight: 400;
+  font-size: 1.25em;
+  font-weight: 300;
   letter-spacing: .1em;
   margin-bottom: 3em;
-
-  @media screen and (max-width: 640px) {
-    font-size: 1.25em;
-  }
 }
 
 .social-icons {
@@ -27,13 +23,14 @@
 
 .icon-container {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
+  position: relative;
+  left: .5em;
 }
 
 .icon-img-container {
   display: flex;
-  width: 30%;
   justify-content: flex-end;
 }
 
@@ -42,9 +39,10 @@
 }
 
 .social-icon-text {
+  font-weight: 300;
   width: 70%;
   font-size: 1.25em;
-  letter-spacing: .05em;
+  letter-spacing: .1em;
   margin-left: 1em;
   text-align: left;
 }
