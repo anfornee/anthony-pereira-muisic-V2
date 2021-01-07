@@ -1,8 +1,22 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 const Social = ({ platform, link, iconSrc, username }) => {
+  const [iconHovered, setIconHovered] = useState('')
+
+  const handleMouseEnter = e => {
+    setIconHovered(' hovered')
+  }
+
+  const handleMouseLeave = e => {
+    setIconHovered('')
+  }
+
   return (
-    <div className='social-icon-container'>
+    <div
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
+      className='social-icon-container'
+    >
       <a
         className='social-icons'
         href={link}
@@ -11,7 +25,7 @@ const Social = ({ platform, link, iconSrc, username }) => {
       >
         <div className='icon-container'>
           <div className='icon-img-container'>
-            <img className='social-icon-img' src={iconSrc} alt={platform} />
+            <img className={'social-icon-img' + iconHovered} src={iconSrc} alt={platform} />
           </div>
           <p className='social-icon-text roboto'>
             {username}
