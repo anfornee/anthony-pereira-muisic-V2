@@ -4,10 +4,12 @@ import { BrowserRouter as Router } from 'react-router-dom'
 import './App.scss'
 
 // Preload images for components
-import transitionPt1 from './images/transition_pt1_web.jpg'
-import transitionPt2 from './images/transition_pt2_web.jpg'
+import transitionPt1 from './images/album_art/transition_pt1_web.jpg'
+import transitionPt2 from './images/album_art/transition_pt2_web.jpg'
+import thePath from './images/album_art/the_path_web.jpeg'
 import profileImg from './images/IMG_1131.jpeg'
 import instagramIcon from './images/icons/instagram.png'
+import soundcloudIcon from './images/icons/soundcloud-logo.png'
 import twitterIcon from './images/icons/twitter.png'
 import youtubeIcon from './images/icons/youtube.png'
 
@@ -25,8 +27,10 @@ const App = () => {
   const images = {
     transitionPt1,
     transitionPt2,
+    thePath,
     profileImg,
     instagramIcon,
+    soundcloudIcon,
     twitterIcon,
     youtubeIcon
   }
@@ -34,8 +38,10 @@ const App = () => {
   const imagesArray = [
     transitionPt1,
     transitionPt2,
+    thePath,
     profileImg,
     instagramIcon,
+    soundcloudIcon,
     twitterIcon,
     youtubeIcon
   ]

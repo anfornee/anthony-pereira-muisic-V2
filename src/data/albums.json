@@ -4,7 +4,7 @@
     "imgSrc": "transitionPt1",
     "links": {
       "Apple": "https://music.apple.com/us/album/transition/1505878860",
-      "Spotify": "https://open.spotify.com/album/5VqboD6So7ACAtfkClKtxj"
+      "Spotify": "https://open.spotify.com/album/5VqboD6So7ACAtfkClKtxj?si=8ZOuu1RZQ1qxSreLspssog"
     }
   },
   {
@@ -12,7 +12,15 @@
     "imgSrc": "transitionPt2",
     "links": {
       "Apple": "https://music.apple.com/tr/album/transition-pt-2/1525392072",
-      "Spotify": "https://open.spotify.com/album/1AgQHaYVx6EmsTUJ4ReWB8?play=true&utm_source=open.spotify.com&utm_medium=open&xid=17259%2C1500001%2C15700022%2C15700105%2C15700124%2C15700149%2C15700168%2C15700173%2C15700186%2C15700201"
+      "Spotify": "https://open.spotify.com/album/1AgQHaYVx6EmsTUJ4ReWB8?si=epRRNjuhQlG1kqBDs65pRQ"
+    }
+  },
+  {
+    "title": "The Path",
+    "imgSrc": "thePath",
+    "links": {
+      "Apple": "https://music.apple.com/us/album/the-path/1500647341?i=1500647342",
+      "Spotify": "https://open.spotify.com/album/1LNvyCOKnDHhQuR8aSTvDB?si=hM_Kd8JKQH68OWgtEd7Sxg"
     }
   }
 ]

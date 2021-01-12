@@ -15,6 +15,12 @@ const Connect = ({ images }) => {
         username='Anthony Pereira Music'
       />
       <Social
+        platform='soundcloud'
+        link='https://soundcloud.com/anthonypereiramusic'
+        iconSrc={images.soundcloudIcon}
+        username='AnthonyPereiraMusic'
+      />
+      <Social
         platform='instagram'
         link='https://www.instagram.com/anthonypereiramusic/'
         iconSrc={images.instagramIcon}
