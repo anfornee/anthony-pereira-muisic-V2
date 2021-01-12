@@ -110,3 +110,19 @@ a {
 .footer-space {
   min-height: 4em;
 }
+
+.wait-to-show {
+  opacity: 0;
+  zoom: -2;
+  font-size: 1.5vw;
+  animation: wait .75s ease-in 5s 1 normal forwards;
+
+  @media screen and (max-width: 640px) {
+    font-size: 3.5vw;
+  }
+}
+
+@keyframes wait {
+  from {opacity: 0;}
+  to {opacity: 1; font-size: inherit;}
+}

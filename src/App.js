@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { BrowserRouter as Router } from 'react-router-dom'
 
 import './App.scss'
@@ -12,6 +12,10 @@ import twitterIcon from './images/icons/twitter.png'
 import youtubeIcon from './images/icons/youtube.png'
 
 // Components
+import Canvas from './Components/Canvas'
+import Header from './Components/Header'
+import Nav from './Components/Nav'
+import SelectedContent from './Components/SelectedContent'
 import TempHeader from './Components/TempHeader'
 
 const App = () => {
@@ -65,8 +69,11 @@ const App = () => {
         imagesLoaded
           ? (
             <div id='main'>
-              <Header setLocation={setLocation} />
-              <Nav location={location} setLocation={setLocation} />
+              <TempHeader />
+              <div className='wait-to-show'>
+                <Header setLocation={setLocation} />
+                <Nav location={location} setLocation={setLocation} />
+              </div>
               <SelectedContent location={location} images={images} />
             </div>
           )
