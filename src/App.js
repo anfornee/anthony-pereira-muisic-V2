@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import { BrowserRouter as Router } from 'react-router-dom'
 
 import './App.scss'
@@ -12,10 +12,7 @@ import twitterIcon from './images/icons/twitter.png'
 import youtubeIcon from './images/icons/youtube.png'
 
 // Components
-import Canvas from './Components/Canvas'
-import Header from './Components/Header'
-import Nav from './Components/Nav'
-import SelectedContent from './Components/SelectedContent'
+import TempHeader from './Components/TempHeader'
 
 const App = () => {
   const [imagesLoaded, setImagesLoaded] = useState(false)
