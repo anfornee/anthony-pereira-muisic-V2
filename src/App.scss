@@ -93,11 +93,11 @@ a {
   transition: 1s;
   margin: 0 auto;
   max-width: 1200px;
-  max-height: calc(100vh - 50vh);
   overflow-y: auto;
 
   @media screen and (max-width: 640px) {
     margin: 14em 0 0;
+    max-height: calc(100vh - 50vh);
   }
 }
 

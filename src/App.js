@@ -8,6 +8,7 @@ import transitionPt1 from './images/album_art/transition_pt1_web.jpg'
 import transitionPt2 from './images/album_art/transition_pt2_web.jpg'
 import thePath from './images/album_art/the_path_web.jpeg'
 import profileImg from './images/IMG_3664_Edited_Small.jpeg'
+import patreonIcon from './images/icons/patreon.png'
 import instagramIcon from './images/icons/instagram.png'
 import soundcloudIcon from './images/icons/soundcloud-logo.png'
 import twitterIcon from './images/icons/twitter.png'
@@ -29,6 +30,7 @@ const App = () => {
     transitionPt2,
     thePath,
     profileImg,
+    patreonIcon,
     instagramIcon,
     soundcloudIcon,
     twitterIcon,
@@ -40,6 +42,7 @@ const App = () => {
     transitionPt2,
     thePath,
     profileImg,
+    patreonIcon,
     instagramIcon,
     soundcloudIcon,
     twitterIcon,
