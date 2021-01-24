@@ -1,9 +1,12 @@
 import React from 'react'
 
-const Latest = props => (
+const Latest = ({ images }) => (
   <div id='latest'>
     <p className='latest-text roboto'>
-      Make sure to come back here for updates and more content!
+      <a href='https://www.patreon.com/posts/hello-46624431?utm_medium=clipboard_copy&utm_source=copy_to_clipboard&utm_campaign=postshare'>
+        <img className='latest-img' src={images.patreonPost} alt='Patreon Post' />
+        <span className='latest-img-desc'>Check out my most recent post on my Patreon</span>
+      </a>
     </p>
   </div>
 )
