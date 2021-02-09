@@ -81,12 +81,14 @@ const App = () => {
         imagesLoaded
           ? (
             <div id='main'>
-              <TempHeader />
-              <div className='wait-to-show'>
-                <Header setLocation={setLocation} />
-                <Nav location={location} setLocation={setLocation} />
-              </div>
-              <SelectedContent location={location} images={images} />
+              <article>
+                <TempHeader />
+                <div className='wait-to-show'>
+                  <Header setLocation={setLocation} />
+                  <Nav location={location} setLocation={setLocation} />
+                </div>
+                <SelectedContent location={location} images={images} />
+              </article>
             </div>
           )
           : false
