@@ -13,7 +13,7 @@ import instagramIcon from './images/icons/instagram.png'
 import soundcloudIcon from './images/icons/soundcloud-logo.png'
 import twitterIcon from './images/icons/twitter.png'
 import youtubeIcon from './images/icons/youtube.png'
-import patreonPost from './images/patreon_post.png'
+import latestPost from './images/web_thumbnail_EP_1.jpg'
 
 // Components
 import Canvas from './Components/Canvas'
@@ -36,7 +36,7 @@ const App = () => {
     soundcloudIcon,
     twitterIcon,
     youtubeIcon,
-    patreonPost
+    latestPost
   }
 
   const imagesArray = [
@@ -49,7 +49,7 @@ const App = () => {
     soundcloudIcon,
     twitterIcon,
     youtubeIcon,
-    patreonPost
+    latestPost
   ]
 
   const cacheImages = async (srcArray) => {
