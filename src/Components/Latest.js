@@ -3,9 +3,9 @@ import React from 'react'
 const Latest = ({ images }) => (
   <div id='latest'>
     <p className='latest-text roboto'>
-      <a href='https://youtu.be/2Sg3Q_3rZmM'>
+      <a href='https://youtu.be/VnXf1YqAAho'>
         <img className='latest-img' src={images.latestPost} alt='Latest Post' />
-        <span className='latest-img-desc'>Check out the first of my Life Cues. A film score for the moments that make up our lives.</span>
+        <span className='latest-img-desc'>Check out my latest video where I talk about my journey and the role music has played in my life.</span>
       </a>
     </p>
   </div>

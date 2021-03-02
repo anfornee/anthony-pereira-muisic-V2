@@ -13,7 +13,7 @@ import instagramIcon from './images/icons/instagram.png'
 import soundcloudIcon from './images/icons/soundcloud-logo.png'
 import twitterIcon from './images/icons/twitter.png'
 import youtubeIcon from './images/icons/youtube.png'
-import latestPost from './images/LC_Rain_0128.jpg'
+import latestPost from './images/SecondVideo.jpg'
 
 // Components
 import Canvas from './Components/Canvas'
