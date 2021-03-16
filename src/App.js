@@ -14,6 +14,7 @@ import soundcloudIcon from './images/icons/soundcloud-logo.png'
 import twitterIcon from './images/icons/twitter.png'
 import youtubeIcon from './images/icons/youtube.png'
 import latestPost from './images/latest-video.jpg'
+import sexlessBookTB from './images/sexless_book_thumbnail.png'
 
 // Components
 import Canvas from './Components/Canvas'
@@ -21,10 +22,12 @@ import Header from './Components/Header'
 import Nav from './Components/Nav'
 import SelectedContent from './Components/SelectedContent'
 import TempHeader from './Components/TempHeader'
+import VideoPlayer from './Components/VideoPlayer'
 
 const App = () => {
   const [imagesLoaded, setImagesLoaded] = useState(false)
   const [location, setLocation] = useState('/')
+  const [videoPlayer, setVideoPlayer] = useState({ active: false, url: '' })
 
   const images = {
     transitionPt1,
@@ -36,7 +39,8 @@ const App = () => {
     soundcloudIcon,
     twitterIcon,
     youtubeIcon,
-    latestPost
+    latestPost,
+    sexlessBookTB
   }
 
   const imagesArray = [
@@ -49,16 +53,17 @@ const App = () => {
     soundcloudIcon,
     twitterIcon,
     youtubeIcon,
-    latestPost
+    latestPost,
+    sexlessBookTB
   ]
 
   const cacheImages = async (srcArray) => {
     const promises = await srcArray.map(src => {
       return new Promise((resolve, reject) => {
-        const img = new Image()
+        const img = new window.Image()
         img.src = src
         img.onload = resolve()
-        img.onerror = reject()
+        img.onerror = reject(new Error('Could not cache image'))
       })
     })
 
@@ -87,7 +92,14 @@ const App = () => {
                   <Header setLocation={setLocation} />
                   <Nav location={location} setLocation={setLocation} />
                 </div>
-                <SelectedContent location={location} images={images} />
+                <SelectedContent location={location} images={images} setVideoPlayer={setVideoPlayer} />
+                {
+                  videoPlayer.active
+                    ? (
+                      <VideoPlayer url={videoPlayer.url} setVideoPlayer={setVideoPlayer} />
+                    )
+                    : false
+                }
               </article>
             </div>
           )

@@ -3,10 +3,11 @@ import { Route } from 'react-router-dom'
 
 import Bio from './Bio'
 import Connect from './Connect'
+import Film from './Film'
 import Latest from './Latest'
 import Music from './Music'
 
-const SelectedContent = ({ location, images }) => {
+const SelectedContent = ({ location, images, setVideoPlayer }) => {
   let isSafari = false
 
   if (navigator.userAgent.indexOf('Safari') !== -1) {
@@ -28,6 +29,12 @@ const SelectedContent = ({ location, images }) => {
         path='/music'
         render={() => (
           <Music images={images} />
+        )}
+      />
+      <Route
+        path='/film'
+        render={() => (
+          <Film images={images} setVideoPlayer={setVideoPlayer} />
         )}
       />
       <Route

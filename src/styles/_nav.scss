@@ -88,6 +88,22 @@
   min-width: 5.15em !important;
 }
 
+.film-hover-line {
+  min-width: 0em;
+  max-width: 0em;
+  background: #fff;
+  height: 2px;
+  transition: .5s;
+}
+
+.film-nav-hovered {
+  min-width: 4em !important;
+}
+
+.film-nav-active {
+  min-width: 4em !important;
+}
+
 .bio-hover-line {
   min-width: 0em;
   background: #fff;
