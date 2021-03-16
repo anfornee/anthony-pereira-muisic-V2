@@ -6,7 +6,7 @@ const albumList = require('../data/albums.json')
 // const trackList = require('../data/songs.json')
 
 const Music = ({ images }) => (
-  <div id='music-page'>
+  <div id='music-page' className='load-content'>
     <div className='albums'>
       {
         albumList.map((album, i) => {

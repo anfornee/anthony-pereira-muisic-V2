@@ -5,7 +5,7 @@ const Canvas = props => {
 
   const drawCanvas = (c, canvas) => {
     const clear = () => {
-      c.fillStyle = '#13131c'
+      c.fillStyle = '#000'
       c.fillRect(0, 0, canvas.width, canvas.height)
     }
 

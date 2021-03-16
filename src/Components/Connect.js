@@ -4,7 +4,7 @@ import Social from './Social'
 
 const Connect = ({ images }) => {
   return (
-    <div id='connect'>
+    <div id='connect' className='load-content'>
       <p className='email-text roboto'>
         contact@anthonypereiramusic.com
       </p>

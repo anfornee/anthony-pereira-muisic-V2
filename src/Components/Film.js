@@ -1,37 +1,24 @@
 import React from 'react'
 import { useHistory } from 'react-router-dom'
 
+import IndividualFilm from './IndividualFilm'
+
 const Film = ({ images, setVideoPlayerActive }) => {
   const history = useHistory()
 
   return (
-    <div id='film'>
-      <div className='film-img-container'>
-        <img
-          className='film-img'
-          src={images.sexlessBookTB}
-          alt='BOOK TRAILER | SEXLESS IN THE CITY by KAT HARRIS'
-        />
-        <div
-          className='film-img-hover'
-          onClick={() => {
-            history.push('/film/video-player/sitcbt')
-            setVideoPlayerActive(true)
-          }}
-        >
-          <p className='nanum'>
-            <span style={{ display: 'block' }}>
-              BOOK TRAILER
-            </span>
-            <span style={{ display: 'block' }}>
-              SEXLESS IN THE CITY by KAT HARRIS
-            </span>
-            <span className='mobile-tap-to-view'>
-              TAP TO VIEW
-            </span>
-          </p>
-        </div>
-      </div>
+    <div id='film' className='load-content'>
+      <IndividualFilm
+        image={images.sexlessBookTB}
+        altText='BOOK TRAILER | SEXLESS IN THE CITY by KAT HARRIS'
+        setVideoPlayerActive={setVideoPlayerActive}
+        history={history}
+        url='/film/video-player/sitcbt'
+        displayText={[
+          'BOOK TRAILER',
+          'SEXLESS IN THE CITY by KAT HARRIS'
+        ]}
+      />
     </div>
   )
 }

@@ -1,8 +1,9 @@
-import React from 'react'
-import { useHistory} from 'react-router-dom'
+import React, { useState } from 'react'
+import { useHistory } from 'react-router-dom'
 import ReactPlayer from 'react-player'
 
 const VideoPlayer = ({ setVideoPlayerActive }) => {
+  const [playerReady, setPlayerReady] = useState(false)
   const history = useHistory()
   const url = window.location.pathname.split('/').pop()
   const videos = {
@@ -20,12 +21,21 @@ const VideoPlayer = ({ setVideoPlayerActive }) => {
       <h2 className='close-video-player quicksand' onClick={closeVideoPlayer}>
         CLOSE
       </h2>
-      <ReactPlayer
-        url={videos[url]}
-        controls='true'
-        title='1'
-        className='video-container'
-      />
+      <span
+        className={
+          playerReady
+            ? 'video-container player-ready'
+            : 'video-container'
+        }
+      >
+        <ReactPlayer
+          url={videos[url]}
+          controls
+          title='1'
+          onReady={() => setPlayerReady(true)}
+          className='player'
+        />
+      </span>
     </div>
   )
 }

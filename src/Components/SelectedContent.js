@@ -18,12 +18,7 @@ const SelectedContent = ({ location, images, setVideoPlayerActive }) => {
 
   return (
     <div
-      style={
-        location === '/'
-          ? { opacity: 0, visibility: 'hidden' }
-          : { opacity: 1, visibility: 'visible' }
-      }
-      className={isSafari ? 'selected-content safari' : 'selected-content'}
+      className={(isSafari ? 'selected-content safari' : 'selected-content') + ' wait-to-show'}
     >
       <Route
         path='/music'

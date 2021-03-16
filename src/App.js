@@ -77,6 +77,9 @@ const App = () => {
   }, [imagesArray])
 
   window.addEventListener('popstate', e => {
+    if (window.location.pathname.includes('video-player')) {
+      setVideoPlayerActive(true)
+    } else setVideoPlayerActive(false)
     setLocation(window.location.pathname)
   })
 

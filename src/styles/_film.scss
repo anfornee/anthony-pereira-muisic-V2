@@ -69,9 +69,12 @@
 
   .video-container {
     z-index: 1000;
-    @media screen and (max-width: 640px) {
-      width: 90% !important;
-      height: auto !important;
+    opacity: 0;
+    transition: .5s;
+    width: 100%;
+
+    &.player-ready {
+      opacity: 1;
     }
   }
 
@@ -80,6 +83,15 @@
     cursor: pointer;
     font-weight: 300;
     letter-spacing: .15em;
+  }
+
+  .player {
+    margin: 0 auto;
+
+    @media screen and (max-width: 640px) {
+      width: 90% !important;
+      height: auto !important;
+    }
   }
 }
 
@@ -90,5 +102,5 @@
   height: 100%;
   width: 100%;
   z-index: 999;
-  background: rgba(19, 19, 28, 0.95);
+  background: rgba(0, 0, 0, 0.95);
 }
