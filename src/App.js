@@ -25,9 +25,10 @@ import TempHeader from './Components/TempHeader'
 import VideoPlayer from './Components/VideoPlayer'
 
 const App = () => {
+  const videoPlayerInUrl = window.location.pathname.includes('video-player') || false
   const [imagesLoaded, setImagesLoaded] = useState(false)
-  const [location, setLocation] = useState('/')
-  const [videoPlayer, setVideoPlayer] = useState({ active: false, url: '' })
+  const [location, setLocation] = useState(window.location.pathname)
+  const [videoPlayerActive, setVideoPlayerActive] = useState(videoPlayerInUrl)
 
   const images = {
     transitionPt1,
@@ -92,11 +93,11 @@ const App = () => {
                   <Header setLocation={setLocation} />
                   <Nav location={location} setLocation={setLocation} />
                 </div>
-                <SelectedContent location={location} images={images} setVideoPlayer={setVideoPlayer} />
+                <SelectedContent location={location} images={images} setVideoPlayerActive={setVideoPlayerActive} />
                 {
-                  videoPlayer.active
+                  videoPlayerActive
                     ? (
-                      <VideoPlayer url={videoPlayer.url} setVideoPlayer={setVideoPlayer} />
+                      <VideoPlayer setVideoPlayerActive={setVideoPlayerActive} />
                     )
                     : false
                 }

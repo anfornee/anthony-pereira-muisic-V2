@@ -7,7 +7,7 @@ import Film from './Film'
 import Latest from './Latest'
 import Music from './Music'
 
-const SelectedContent = ({ location, images, setVideoPlayer }) => {
+const SelectedContent = ({ location, images, setVideoPlayerActive }) => {
   let isSafari = false
 
   if (navigator.userAgent.indexOf('Safari') !== -1) {
@@ -34,7 +34,7 @@ const SelectedContent = ({ location, images, setVideoPlayer }) => {
       <Route
         path='/film'
         render={() => (
-          <Film images={images} setVideoPlayer={setVideoPlayer} />
+          <Film images={images} setVideoPlayerActive={setVideoPlayerActive} />
         )}
       />
       <Route

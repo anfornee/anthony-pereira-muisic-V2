@@ -1,6 +1,9 @@
 import React from 'react'
+import { useHistory } from 'react-router-dom'
 
-const Film = ({ images, setVideoPlayer }) => {
+const Film = ({ images, setVideoPlayerActive }) => {
+  const history = useHistory()
+
   return (
     <div id='film'>
       <div className='film-img-container'>
@@ -11,7 +14,10 @@ const Film = ({ images, setVideoPlayer }) => {
         />
         <div
           className='film-img-hover'
-          onClick={() => setVideoPlayer({ active: true, url: 'https://vimeo.com/519129359' })}
+          onClick={() => {
+            history.push('/film/video-player/sitcbt')
+            setVideoPlayerActive(true)
+          }}
         >
           <p className='nanum'>
             <span style={{ display: 'block' }}>
@@ -19,6 +25,9 @@ const Film = ({ images, setVideoPlayer }) => {
             </span>
             <span style={{ display: 'block' }}>
               SEXLESS IN THE CITY by KAT HARRIS
+            </span>
+            <span className='mobile-tap-to-view'>
+              TAP TO VIEW
             </span>
           </p>
         </div>
