@@ -35,5 +35,9 @@
     margin: .5em auto 0;
     width: 75%;
     text-align: center;
+
+    @media screen and (max-width: 640px) {
+      width: 90%;
+    }
   }
 }
