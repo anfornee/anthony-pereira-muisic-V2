@@ -13,7 +13,7 @@ import instagramIcon from './images/icons/instagram.png'
 import soundcloudIcon from './images/icons/soundcloud-logo.png'
 import twitterIcon from './images/icons/twitter.png'
 import youtubeIcon from './images/icons/youtube.png'
-import latestPost from './images/latest-video.jpg'
+import latestPost from './images/latest-video.png'
 import sexlessBookTB from './images/sexless_book_thumbnail.png'
 
 // Components
