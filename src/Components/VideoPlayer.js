@@ -7,7 +7,8 @@ const VideoPlayer = ({ setVideoPlayerActive }) => {
   const history = useHistory()
   const url = window.location.pathname.split('/').pop()
   const videos = {
-    sitcbt: 'https://vimeo.com/519129359'
+    sitcbt: 'https://vimeo.com/519129359',
+    sccw: 'https://www.youtube.com/embed/cfTCHdIOkDs'
   }
 
   const closeVideoPlayer = () => {
