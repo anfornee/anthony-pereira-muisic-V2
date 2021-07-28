@@ -94,6 +94,11 @@ a {
   mask-image: linear-gradient(to top, black 98%, transparent 100%);
   -webkit-mask-image: linear-gradient(to top, black 98%, transparent 100%);
   padding: 2% 0 0;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
 
   @media screen and (max-height: 875px) {
     max-height: calc(100vh - 50vh);
