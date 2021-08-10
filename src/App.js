@@ -15,6 +15,8 @@ import twitterIcon from './images/icons/twitter.png'
 import youtubeIcon from './images/icons/youtube.png'
 import latestPost from './images/latest-video.jpg'
 import sexlessBookTB from './images/sexless_book_thumbnail.png'
+import jonMeyerTB from './images/jon_meyer_thumbnail.png'
+import stargirlTB from './images/stargirl-thumbnail.jpg'
 
 // Components
 import Canvas from './Components/Canvas'
@@ -41,7 +43,9 @@ const App = () => {
     twitterIcon,
     youtubeIcon,
     latestPost,
-    sexlessBookTB
+    sexlessBookTB,
+    jonMeyerTB,
+    stargirlTB
   }
 
   const imagesArray = [
@@ -55,7 +59,9 @@ const App = () => {
     twitterIcon,
     youtubeIcon,
     latestPost,
-    sexlessBookTB
+    sexlessBookTB,
+    jonMeyerTB,
+    stargirlTB
   ]
 
   const cacheImages = async (srcArray) => {

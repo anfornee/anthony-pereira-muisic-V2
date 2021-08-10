@@ -34,6 +34,28 @@ const Film = ({ images, setVideoPlayerActive }) => {
           'COPPOLA WINE'
         ]}
       />
+      <IndividualFilm
+        image={images.jonMeyerTB}
+        altText='JON MEYER SCORING COMPETITION | ORIGINAL SCORE'
+        setVideoPlayerActive={setVideoPlayerActive}
+        history={history}
+        url='/film/video-player/jmsc'
+        displayText={[
+          'JON MEYER SCORING COMPETITION',
+          'ORIGINAL SCORE'
+        ]}
+      />
+      <IndividualFilm
+        image={images.stargirlTB}
+        altText='STARGIRL SCORING COMPETITION | ORIGINAL SCORE'
+        setVideoPlayerActive={setVideoPlayerActive}
+        history={history}
+        url='/film/video-player/sgsc'
+        displayText={[
+          'STARGIRL SCORING COMPETITION',
+          'ORIGINAL SCORE'
+        ]}
+      />
     </div>
   )
 }
