@@ -1,11 +1,11 @@
 import React from 'react'
 
-const IndividualFilm = ({ image, altText, setVideoPlayerActive, history, url, displayText }) => {
+const IndividualFilm = ({ image, altText, setVideoPlayerActive, navigate, url, displayText }) => {
   return (
     <div
       className='film-img-container'
       onClick={() => {
-        history.push(url)
+        navigate(url)
         setVideoPlayerActive(true)
       }}
     >
