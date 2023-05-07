@@ -11,7 +11,7 @@ const IndividualFilm = ({ image, altText, setVideoPlayerActive, history, url, di
     >
       <img
         className='film-img'
-        src={image}
+        src={image.src}
         alt={altText}
       />
       <p className='nanum'>

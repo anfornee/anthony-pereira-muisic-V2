@@ -1,5 +1,5 @@
 import React from 'react'
-import { Route } from 'react-router-dom'
+import { Routes, Route } from 'react-router-dom'
 
 import Bio from './Bio'
 import Connect from './Connect'
@@ -20,36 +20,13 @@ const SelectedContent = ({ location, images, setVideoPlayerActive }) => {
     <div
       className={(isSafari ? 'selected-content safari' : 'selected-content') + ' wait-to-show'}
     >
-      <Route
-        path='/music'
-        render={() => (
-          <Music images={images} />
-        )}
-      />
-      <Route
-        path='/film'
-        render={() => (
-          <Film images={images} setVideoPlayerActive={setVideoPlayerActive} />
-        )}
-      />
-      <Route
-        path='/bio'
-        render={() => (
-          <Bio images={images} />
-        )}
-      />
-      <Route
-        path='/connect'
-        render={() => (
-          <Connect images={images} />
-        )}
-      />
-      <Route
-        path='/latest'
-        render={() => (
-          <Latest images={images} />
-        )}
-      />
+      <Routes>
+        <Route path='/music' element={<Music images={images} />} />
+        <Route path='/film' element={<Film images={images} setVideoPlayerActive={setVideoPlayerActive} />} />
+        <Route path='/bio' element={<Bio images={images} />} />
+        <Route path='/connect' element={<Connect images={images} />} />
+        <Route path='/latest' element={<Latest images={images} />} />
+      </Routes>
     </div>
   )
 }

@@ -1,5 +1,5 @@
 import React from 'react'
-import { useHistory } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 
 import IndividualFilm from './IndividualFilm'
 
@@ -8,7 +8,7 @@ import IndividualFilm from './IndividualFilm'
 // https://i.ytimg.com/vi_webp/cfTCHdIOkDs/maxresdefault.webp
 
 const Film = ({ images, setVideoPlayerActive }) => {
-  const history = useHistory()
+  const navigate = useNavigate()
 
   return (
     <div id='film' className='load-content'>
@@ -16,7 +16,7 @@ const Film = ({ images, setVideoPlayerActive }) => {
         image={images.sexlessBookTB}
         altText='BOOK TRAILER | SEXLESS IN THE CITY by KAT HARRIS'
         setVideoPlayerActive={setVideoPlayerActive}
-        history={history}
+        history={navigate}
         url='/film/video-player/sitcbt'
         displayText={[
           'BOOK TRAILER',
@@ -24,10 +24,10 @@ const Film = ({ images, setVideoPlayerActive }) => {
         ]}
       />
       <IndividualFilm
-        image='https://i.ytimg.com/vi_webp/cfTCHdIOkDs/maxresdefault.webp'
+        image={images.coppolaTB}
         altText='STAYING CONNECTED | COPPOLA WINE'
         setVideoPlayerActive={setVideoPlayerActive}
-        history={history}
+        history={navigate}
         url='/film/video-player/sccw'
         displayText={[
           'STAYING CONNECTED',
@@ -38,7 +38,7 @@ const Film = ({ images, setVideoPlayerActive }) => {
         image={images.jonMeyerTB}
         altText='JON MEYER SCORING COMPETITION | ORIGINAL SCORE'
         setVideoPlayerActive={setVideoPlayerActive}
-        history={history}
+        history={navigate}
         url='/film/video-player/jmsc'
         displayText={[
           'JON MEYER SCORING COMPETITION',
@@ -49,7 +49,7 @@ const Film = ({ images, setVideoPlayerActive }) => {
         image={images.stargirlTB}
         altText='STARGIRL SCORING COMPETITION | ORIGINAL SCORE'
         setVideoPlayerActive={setVideoPlayerActive}
-        history={history}
+        history={navigate}
         url='/film/video-player/sgsc'
         displayText={[
           'STARGIRL SCORING COMPETITION',

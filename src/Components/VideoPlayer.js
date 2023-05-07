@@ -1,10 +1,10 @@
 import React, { useState } from 'react'
-import { useHistory } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 import ReactPlayer from 'react-player'
 
 const VideoPlayer = ({ setVideoPlayerActive }) => {
   const [playerReady, setPlayerReady] = useState(false)
-  const history = useHistory()
+  const navigate = useNavigate()
   const url = window.location.pathname.split('/').pop()
   const videos = {
     sitcbt: 'https://vimeo.com/519129359',
@@ -14,7 +14,7 @@ const VideoPlayer = ({ setVideoPlayerActive }) => {
   }
 
   const closeVideoPlayer = () => {
-    history.push('/film')
+    navigate.push('/film')
     setVideoPlayerActive(false)
   }
 
