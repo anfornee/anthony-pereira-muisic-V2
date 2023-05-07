@@ -3,7 +3,7 @@ import React from 'react'
 const Bio = ({ images }) => {
   return (
     <div id='bio' className='load-content'>
-      <img className='bio-image' src={images.profileImg} alt='Profile' />
+      <img className='bio-image' src={images.profileImg.src} alt='Profile' />
       <div className='bio-container'>
         <p className='bio-text roboto'>
           Surrounded by music his entire life, Anthony learned how to fully express

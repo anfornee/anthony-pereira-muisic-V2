@@ -8,7 +8,7 @@ const Album = ({ title, imgSrc, links }) => (
     <div className='album-container'>
       <img
         className='album-img'
-        src={imgSrc}
+        src={imgSrc.src}
         alt={title + ' album art.'}
       />
       <div className='album-hover'>

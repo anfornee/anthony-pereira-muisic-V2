@@ -14,8 +14,9 @@ import soundcloudIcon from './images/icons/soundcloud-logo.png'
 import twitterIcon from './images/icons/twitter.png'
 import youtubeIcon from './images/icons/youtube.png'
 import latestPost from './images/latest-video.jpg'
-import sexlessBookTB from './images/sexless_book_thumbnail.png'
-import jonMeyerTB from './images/jon_meyer_thumbnail.png'
+import sexlessBookTB from './images/sexless_book_thumbnail.jpg'
+import coppolaTB from './images/copolla_tb.jpg'
+import jonMeyerTB from './images/jon_meyer_thumbnail.jpg'
 import stargirlTB from './images/stargirl-thumbnail.jpg'
 
 // Components
@@ -32,24 +33,7 @@ const App = () => {
   const [location, setLocation] = useState(window.location.pathname)
   const [videoPlayerActive, setVideoPlayerActive] = useState(videoPlayerInUrl)
 
-  const images = {
-    transitionPt1,
-    transitionPt2,
-    thePath,
-    profileImg,
-    patreonIcon,
-    instagramIcon,
-    soundcloudIcon,
-    twitterIcon,
-    youtubeIcon,
-    latestPost,
-    sexlessBookTB,
-    jonMeyerTB,
-    stargirlTB
-  }
-
-  const loadedImagesList = useMemo(() => [], [])
-  const imagesList = {}
+  const loadedImagesList = useMemo(() => { return {} }, [])
 
   useEffect(() => {
     const imagesArray = [
@@ -64,6 +48,7 @@ const App = () => {
       { name: 'youtubeIcon', src: youtubeIcon },
       { name: 'latestPost', src: latestPost },
       { name: 'sexlessBookTB', src: sexlessBookTB },
+      { name: 'coppolaTB', src: coppolaTB },
       { name: 'jonMeyerTB', src: jonMeyerTB },
       { name: 'stargirlTB', src: stargirlTB }
     ]
@@ -78,16 +63,14 @@ const App = () => {
       })
     }
     Promise.all(imagesArray.map(image => loadImage(image)))
-      .then(loadedImages => loadedImagesList.push(...loadedImages))
+      .then(loadedImages => {
+        for (const image of loadedImages) {
+          loadedImagesList[image.name] = image.image
+        }
+      })
       .then(() => setImagesLoaded(true))
       .catch(err => console.log(err))
   }, [loadedImagesList])
-
-  if (imagesLoaded) {
-    loadedImagesList.forEach(imageData => {
-      imagesList[imageData.name] = imageData.image
-    })
-  }
 
   window.addEventListener('popstate', e => {
     if (window.location.pathname.includes('video-player')) {
@@ -109,7 +92,7 @@ const App = () => {
                   <Header setLocation={setLocation} />
                   <Nav location={location} setLocation={setLocation} />
                 </div>
-                <SelectedContent location={location} images={images} setVideoPlayerActive={setVideoPlayerActive} />
+                <SelectedContent location={location} images={loadedImagesList} setVideoPlayerActive={setVideoPlayerActive} />
                 {
                   videoPlayerActive
                     ? (

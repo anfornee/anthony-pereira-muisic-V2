@@ -1,9 +1,7 @@
 import React from 'react'
 import Album from './Album'
-// import AudioPlayer from './AudioPlayer'
 
 const albumList = require('../data/albums.json')
-// const trackList = require('../data/songs.json')
 
 const Music = ({ images }) => (
   <div id='music-page' className='load-content'>
@@ -21,18 +19,6 @@ const Music = ({ images }) => (
         })
       }
     </div>
-    {/* {
-        trackList.map((track, i) => {
-          return (
-            <AudioPlayer
-              key={i}
-              title={track.title}
-              duration={track.duration}
-              src={track.src}
-            />
-          )
-        })
-      } */}
   </div>
 )
 
