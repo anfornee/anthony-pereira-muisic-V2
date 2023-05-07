@@ -16,7 +16,7 @@ const Film = ({ images, setVideoPlayerActive }) => {
         image={images.sexlessBookTB}
         altText='BOOK TRAILER | SEXLESS IN THE CITY by KAT HARRIS'
         setVideoPlayerActive={setVideoPlayerActive}
-        history={navigate}
+        navigate={navigate}
         url='/film/video-player/sitcbt'
         displayText={[
           'BOOK TRAILER',
@@ -27,7 +27,7 @@ const Film = ({ images, setVideoPlayerActive }) => {
         image={images.coppolaTB}
         altText='STAYING CONNECTED | COPPOLA WINE'
         setVideoPlayerActive={setVideoPlayerActive}
-        history={navigate}
+        navigate={navigate}
         url='/film/video-player/sccw'
         displayText={[
           'STAYING CONNECTED',
@@ -38,7 +38,7 @@ const Film = ({ images, setVideoPlayerActive }) => {
         image={images.jonMeyerTB}
         altText='JON MEYER SCORING COMPETITION | ORIGINAL SCORE'
         setVideoPlayerActive={setVideoPlayerActive}
-        history={navigate}
+        navigate={navigate}
         url='/film/video-player/jmsc'
         displayText={[
           'JON MEYER SCORING COMPETITION',
@@ -49,7 +49,7 @@ const Film = ({ images, setVideoPlayerActive }) => {
         image={images.stargirlTB}
         altText='STARGIRL SCORING COMPETITION | ORIGINAL SCORE'
         setVideoPlayerActive={setVideoPlayerActive}
-        history={navigate}
+        navigate={navigate}
         url='/film/video-player/sgsc'
         displayText={[
           'STARGIRL SCORING COMPETITION',

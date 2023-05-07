@@ -14,7 +14,7 @@ const VideoPlayer = ({ setVideoPlayerActive }) => {
   }
 
   const closeVideoPlayer = () => {
-    navigate.push('/film')
+    navigate('/film')
     setVideoPlayerActive(false)
   }
 
