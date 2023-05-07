@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useMemo } from 'react'
 import { BrowserRouter as Router } from 'react-router-dom'
 
 import './App.scss'
@@ -48,39 +48,46 @@ const App = () => {
     stargirlTB
   }
 
-  const imagesArray = [
-    transitionPt1,
-    transitionPt2,
-    thePath,
-    profileImg,
-    patreonIcon,
-    instagramIcon,
-    soundcloudIcon,
-    twitterIcon,
-    youtubeIcon,
-    latestPost,
-    sexlessBookTB,
-    jonMeyerTB,
-    stargirlTB
-  ]
-
-  const cacheImages = async (srcArray) => {
-    const promises = await srcArray.map(src => {
-      return new Promise((resolve, reject) => {
-        const img = new window.Image()
-        img.src = src
-        img.onload = resolve()
-        img.onerror = reject(new Error('Could not cache image'))
-      })
-    })
-
-    await Promise.all(promises)
-    setImagesLoaded(true)
-  }
+  const loadedImagesList = useMemo(() => [], [])
+  const imagesList = {}
 
   useEffect(() => {
-    cacheImages(imagesArray)
-  }, [imagesArray])
+    const imagesArray = [
+      { name: 'transitionPt1', src: transitionPt1 },
+      { name: 'transitionPt2', src: transitionPt2 },
+      { name: 'thePath', src: thePath },
+      { name: 'profileImg', src: profileImg },
+      { name: 'patreonIcon', src: patreonIcon },
+      { name: 'instagramIcon', src: instagramIcon },
+      { name: 'soundcloudIcon', src: soundcloudIcon },
+      { name: 'twitterIcon', src: twitterIcon },
+      { name: 'youtubeIcon', src: youtubeIcon },
+      { name: 'latestPost', src: latestPost },
+      { name: 'sexlessBookTB', src: sexlessBookTB },
+      { name: 'jonMeyerTB', src: jonMeyerTB },
+      { name: 'stargirlTB', src: stargirlTB }
+    ]
+
+    const loadImage = image => {
+      return new Promise((resolve, reject) => {
+        const loadImg = new window.Image()
+        loadImg.src = image.src
+        loadImg.alt = image.name
+        loadImg.onload = () => resolve({ name: image.name, image: loadImg })
+        loadImg.onerror = err => reject(err)
+      })
+    }
+    Promise.all(imagesArray.map(image => loadImage(image)))
+      .then(loadedImages => loadedImagesList.push(...loadedImages))
+      .then(() => setImagesLoaded(true))
+      .catch(err => console.log(err))
+  }, [loadedImagesList])
+
+  if (imagesLoaded) {
+    loadedImagesList.forEach(imageData => {
+      imagesList[imageData.name] = imageData.image
+    })
+  }
 
   window.addEventListener('popstate', e => {
     if (window.location.pathname.includes('video-player')) {
@@ -91,13 +98,13 @@ const App = () => {
 
   return (
     <Router>
-      <Canvas />
+      <TempHeader imagesLoaded={imagesLoaded} />
       {
         imagesLoaded
           ? (
             <div id='main'>
+              <Canvas />
               <article>
-                <TempHeader />
                 <div className='wait-to-show'>
                   <Header setLocation={setLocation} />
                   <Nav location={location} setLocation={setLocation} />
