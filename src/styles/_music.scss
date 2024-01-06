@@ -40,11 +40,12 @@
 
 .album-container {
   position: relative;
+
+  img {
+    width: 100%;
+  }
 }
 
-.album-img {
-  width: 100%;
-}
 
 .album-hover {
   position: absolute;

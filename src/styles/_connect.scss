@@ -13,13 +13,6 @@
   width: 100%;
 }
 
-.social-icon-img {
-  filter: invert(100%);
-  height: 3em;
-  position: relative;
-  bottom: 0;
-  transition: .2s;
-}
 
 .icon-container {
   display: flex;
@@ -32,10 +25,20 @@
 .icon-img-container {
   display: flex;
   justify-content: flex-end;
-}
 
-.social-icon-img.hovered {
-  bottom: 4px;
+  img {
+    filter: invert(100%);
+    height: 3em;
+    position: relative;
+    bottom: 0;
+    transition: .2s;
+  }
+
+  &.hovered {
+    img {
+      bottom: 4px;
+    }
+  }
 }
 
 .social-icon-text {

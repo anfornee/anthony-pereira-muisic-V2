@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-const Social = ({ platform, link, iconSrc, username }) => {
+const Social = ({ platform, link, image, username }) => {
   const [iconHovered, setIconHovered] = useState('')
 
   const handleMouseEnter = e => {
@@ -24,8 +24,9 @@ const Social = ({ platform, link, iconSrc, username }) => {
         rel='noopener noreferrer'
       >
         <div className='icon-container'>
-          <div className='icon-img-container'>
-            <img className={'social-icon-img' + iconHovered} src={iconSrc} alt={platform} />
+          <div className={'icon-img-container ' + iconHovered}>
+            {image}
+            {/* <img className={'social-icon-img' + iconHovered} src={iconSrc} alt={platform} /> */}
           </div>
           <p className='social-icon-text roboto'>
             {username}

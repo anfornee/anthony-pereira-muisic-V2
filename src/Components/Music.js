@@ -12,7 +12,7 @@ const Music = ({ images }) => (
             <Album
               key={i}
               title={album.title}
-              imgSrc={images[album.imgSrc]}
+              image={images[album.imgSrc]}
               links={album.links}
             />
           )

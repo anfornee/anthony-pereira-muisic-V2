@@ -58,7 +58,16 @@ const App = () => {
         const loadImg = new window.Image()
         loadImg.src = image.src
         loadImg.alt = image.name
-        loadImg.onload = () => resolve({ name: image.name, image: loadImg })
+        loadImg.onload = () => {
+          const imgElement = React.createElement(
+            'img',
+            {
+              src: image.src,
+              alt: image.name
+            }
+          )
+          resolve({ name: image.name, image: imgElement })
+        }
         loadImg.onerror = err => reject(err)
       })
     }
