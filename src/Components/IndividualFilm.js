@@ -9,11 +9,12 @@ const IndividualFilm = ({ image, altText, setVideoPlayerActive, navigate, url, d
         setVideoPlayerActive(true)
       }}
     >
-      <img
+      {image}
+      {/* <img
         className='film-img'
         src={image.src}
         alt={altText}
-      />
+      /> */}
       <p className='nanum'>
         <span style={{ display: 'block' }}>
           {

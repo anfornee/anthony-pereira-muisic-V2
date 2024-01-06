@@ -3,14 +3,15 @@ import React from 'react'
 import appleIcon from '../images/icons/001-apple.png'
 import spotifyIcon from '../images/icons/002-spotify.png'
 
-const Album = ({ title, imgSrc, links }) => (
+const Album = ({ title, image, links }) => (
   <div className='album roboto'>
     <div className='album-container'>
-      <img
+      {image}
+      {/* <img
         className='album-img'
         src={imgSrc.src}
         alt={title + ' album art.'}
-      />
+      /> */}
       <div className='album-hover'>
         <a
           target='_blank'

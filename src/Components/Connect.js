@@ -11,31 +11,31 @@ const Connect = ({ images }) => {
       <Social
         platform='youtube'
         link='https://www.youtube.com/channel/UCSFjL86stjY_ONeb-ct_cPA'
-        iconSrc={images.youtubeIcon.src}
+        image={images.youtubeIcon}
         username='Anthony Pereira Music'
       />
       <Social
         platform='patreon'
         link='https://www.patreon.com/anthonypereiramusic'
-        iconSrc={images.patreonIcon.src}
+        image={images.patreonIcon}
         username='Anthony Pereira Music'
       />
       <Social
         platform='soundcloud'
         link='https://soundcloud.com/anthonypereiramusic'
-        iconSrc={images.soundcloudIcon.src}
+        image={images.soundcloudIcon}
         username='AnthonyPereiraMusic'
       />
       <Social
         platform='instagram'
         link='https://www.instagram.com/anthonypereiramusic/'
-        iconSrc={images.instagramIcon.src}
+        image={images.instagramIcon}
         username='@anthonypereiramusic'
       />
       <Social
         platform='twitter'
         link='https://twitter.com/anthonyp_music'
-        iconSrc={images.twitterIcon.src}
+        image={images.twitterIcon}
         username='@anthonyp_music'
       />
       <div className='footer-space mobile-only' />

@@ -21,6 +21,7 @@ const SelectedContent = ({ location, images, setVideoPlayerActive }) => {
       className={(isSafari ? 'selected-content safari' : 'selected-content') + ' wait-to-show'}
     >
       <Routes>
+        <Route path='/' element={null} />
         <Route path='/music' element={<Music images={images} />} />
         <Route path='/film' element={<Film images={images} setVideoPlayerActive={setVideoPlayerActive} />} />
         <Route path='/bio' element={<Bio images={images} />} />
