@@ -1,6 +1,14 @@
 import React, { useState, useEffect, useMemo } from 'react'
 import { BrowserRouter as Router } from 'react-router-dom'
 
+// Components
+import Canvas from './Components/Canvas'
+import Header from './Components/Header'
+import Nav from './Components/Nav'
+import SelectedContent from './Components/SelectedContent'
+import TempHeader from './Components/TempHeader'
+import VideoPlayer from './Components/VideoPlayer'
+
 import './App.scss'
 
 // Preload images for components
@@ -19,14 +27,6 @@ import coppolaTB from './images/copolla_tb.jpg'
 import jonMeyerTB from './images/jon_meyer_thumbnail.jpg'
 import stargirlTB from './images/stargirl-thumbnail.jpg'
 
-// Components
-import Canvas from './Components/Canvas'
-import Header from './Components/Header'
-import Nav from './Components/Nav'
-import SelectedContent from './Components/SelectedContent'
-import TempHeader from './Components/TempHeader'
-import VideoPlayer from './Components/VideoPlayer'
-
 const App = () => {
   const videoPlayerInUrl = window.location.pathname.includes('video-player') || false
   const [imagesLoaded, setImagesLoaded] = useState(false)
@@ -37,20 +37,20 @@ const App = () => {
 
   useEffect(() => {
     const imagesArray = [
-      { name: 'transitionPt1', src: transitionPt1 },
-      { name: 'transitionPt2', src: transitionPt2 },
-      { name: 'thePath', src: thePath },
-      { name: 'profileImg', src: profileImg },
-      { name: 'patreonIcon', src: patreonIcon },
-      { name: 'instagramIcon', src: instagramIcon },
-      { name: 'soundcloudIcon', src: soundcloudIcon },
-      { name: 'twitterIcon', src: twitterIcon },
-      { name: 'youtubeIcon', src: youtubeIcon },
-      { name: 'latestPost', src: latestPost },
-      { name: 'sexlessBookTB', src: sexlessBookTB },
-      { name: 'coppolaTB', src: coppolaTB },
-      { name: 'jonMeyerTB', src: jonMeyerTB },
-      { name: 'stargirlTB', src: stargirlTB }
+      { name: 'transitionPt1', src: transitionPt1, alt: 'Transition PT. 1 album art', className: 'album-img' },
+      { name: 'transitionPt2', src: transitionPt2, alt: 'Transition PT. 2 album art', className: 'album-img' },
+      { name: 'thePath', src: thePath, alt: 'The Path album art', className: 'album-img' },
+      { name: 'profileImg', src: profileImg, alt: 'Anthony Pereira', className: 'bio-image' },
+      { name: 'patreonIcon', src: patreonIcon, alt: 'Patreon', className: 'social-icon-img' },
+      { name: 'instagramIcon', src: instagramIcon, alt: 'Instagram', className: 'social-icon-img' },
+      { name: 'soundcloudIcon', src: soundcloudIcon, alt: 'SoundCloud', className: 'social-icon-img' },
+      { name: 'twitterIcon', src: twitterIcon, alt: 'Twitter', className: 'social-icon-img' },
+      { name: 'youtubeIcon', src: youtubeIcon, alt: 'YouTube', className: 'social-icon-img' },
+      { name: 'latestPost', src: latestPost, alt: '', className: 'latest-img' },
+      { name: 'sexlessBookTB', src: sexlessBookTB, alt: 'Sexless in the City video thumbnail', className: 'film-img' },
+      { name: 'coppolaTB', src: coppolaTB, alt: 'Coppola Wine video thumbnail', className: 'film-img' },
+      { name: 'jonMeyerTB', src: jonMeyerTB, alt: 'Jon Meyer video thumbnail', className: 'film-img' },
+      { name: 'stargirlTB', src: stargirlTB, alt: 'Stargirl Spitfire Audio Competition video thumbnail', className: 'film-img' }
     ]
 
     const loadImage = image => {
@@ -63,7 +63,8 @@ const App = () => {
             'img',
             {
               src: image.src,
-              alt: image.name
+              alt: image.alt,
+              className: image.className
             }
           )
           resolve({ name: image.name, image: imgElement })
