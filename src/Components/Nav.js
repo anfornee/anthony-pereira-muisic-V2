@@ -37,20 +37,20 @@ const Nav = ({ location, setLocation }) => {
       <NavItem
         addHovered={addHovered}
         removeHovered={removeHovered}
-        item='film'
-        location={location}
-        setLocation={setLocation}
-        defaultStyle={{ top: '4em', opacity: 1 }}
-      />
-      <NavItem
-        addHovered={addHovered}
-        removeHovered={removeHovered}
         item='bio'
         location={location}
         setLocation={setLocation}
-        defaultStyle={{ top: '8em', opacity: 1, zIndex: 1 }}
-      />
-      <NavItem
+        defaultStyle={{ top: '4em', opacity: 1, zIndex: 1 }}
+      />      
+      {/* <NavItem
+        addHovered={addHovered}
+        removeHovered={removeHovered}
+        item='film'
+        location={location}
+        setLocation={setLocation}
+        defaultStyle={{ top: '8em', opacity: 1 }}
+      /> */}
+      {/* <NavItem
         addHovered={addHovered}
         removeHovered={removeHovered}
         item='connect'
@@ -65,7 +65,7 @@ const Nav = ({ location, setLocation }) => {
         location={location}
         setLocation={setLocation}
         defaultStyle={{ top: '16em', opacity: 1, zIndex: 1 }}
-      />
+      /> */}
     </div>
   )
 }

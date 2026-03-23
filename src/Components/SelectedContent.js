@@ -1,11 +1,11 @@
 import React from 'react'
 import { Routes, Route } from 'react-router-dom'
 
-import Bio from './Bio'
-import Connect from './Connect'
-import Film from './Film'
-import Latest from './Latest'
 import Music from './Music'
+import Bio from './Bio'
+// import Connect from './Connect'
+// import Film from './Film'
+// import Latest from './Latest'
 
 const SelectedContent = ({ location, images, setVideoPlayerActive }) => {
   let isSafari = false
@@ -23,10 +23,10 @@ const SelectedContent = ({ location, images, setVideoPlayerActive }) => {
       <Routes>
         <Route path='/' element={null} />
         <Route path='/music' element={<Music images={images} />} />
-        <Route path='/film' element={<Film images={images} setVideoPlayerActive={setVideoPlayerActive} />} />
         <Route path='/bio' element={<Bio images={images} />} />
+        {/* <Route path='/film' element={<Film images={images} setVideoPlayerActive={setVideoPlayerActive} />} />
         <Route path='/connect' element={<Connect images={images} />} />
-        <Route path='/latest' element={<Latest images={images} />} />
+        <Route path='/latest' element={<Latest images={images} />} /> */}
       </Routes>
     </div>
   )

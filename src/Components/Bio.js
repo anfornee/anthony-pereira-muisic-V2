@@ -9,10 +9,7 @@ const Bio = ({ images }) => {
         <p className='bio-text roboto'>
           Surrounded by music his entire life, Anthony learned how to fully express
           himself with melodies and sounds. He feels music is best used by telling a
-          story and helping to paint an emotive picture. He resides in Los Angeles,
-          fully immersed in the creative culture that floods the area. While working
-          on his own solo projects, Anthony also assists in the story telling process
-          by providing original scores to all types of visual media.
+          story and helping to paint an emotive picture. He resides in Orlando.
         </p>
       </div>
     </div>
