@@ -1,7 +1,7 @@
 import React from 'react'
 import Album from './Album'
 
-const albumList = require('../data/albums.json')
+import albumList from '../data/albums.json'
 
 const Music = ({ images }) => (
   <div id='music-page' className='load-content'>

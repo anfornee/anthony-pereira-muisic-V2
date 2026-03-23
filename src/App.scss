@@ -1,12 +1,12 @@
-@import 'src/styles/temp';
-@import 'src/styles/fonts';
-@import 'src/styles/header';
-@import 'src/styles/nav';
-@import 'src/styles/music';
-@import 'src/styles/film';
-@import 'src/styles/bio';
-@import 'src/styles/connect';
-@import 'src/styles/latest';
+@use '@/styles/temp';
+@use '@/styles/fonts';
+@use '@/styles/header';
+@use '@/styles/nav';
+@use '@/styles/music';
+@use '@/styles/film';
+@use '@/styles/bio';
+@use '@/styles/connect';
+@use '@/styles/latest';
 
 /* Colors */
 $White: #ffffff;
